@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SDET / QA Automation Engineer Job Application</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- Application Form Wizard -->
+  <div class="form-wizard">
+    <h1>Apply for SDET / QA Automation Engineer Position</h1>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+      <div class="step">
+        <p>Personal Info</p>
+        <div class="bullet"><span>1</span></div>
+        <div class="check fas fa-check"></div>
+      </div>
+      <div class="step">
+        <p>Job Preferences</p>
+        <div class="bullet"><span>2</span></div>
+        <div class="check fas fa-check"></div>
+      </div>
+      <div class="step">
+        <p>Additional Info</p>
+        <div class="bullet"><span>3</span></div>
+        <div class="check fas fa-check"></div>
+      </div>
+      <div class="step">
+        <p>Submit</p>
+        <div class="bullet"><span>4</span></div>
+        <div class="check fas fa-check"></div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <form id="application-form">
+
+      <!-- Step 1: Personal Information -->
+      <!-- Step 1: Personal Information -->
+      <div class="form-step active">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+          <label for="resume">Upload Resume</label>
+          <input type="file" id="resume" name="resume" required>
+        </div>
+        <div class="button-container">
+          <button type="button" class="next-btn">Next</button>
+        </div>
+      </div>
+
+
+      <!-- Step 2: Job Preferences -->
+      <div class="form-step">
+        <div class="form-group">
+          <label for="position">Position Applying For</label>
+          <select id="position" name="position" required>
+            <option value="SDET">SDET</option>
+            <option value="QA Automation Engineer">QA Automation Engineer</option>
+            <option value="Senior QA Engineer">Senior QA Engineer</option>
+            <option value="QA Lead">QA Lead</option>
+            <option value="Test Automation Architect">Test Automation Architect</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="experience">Years of Experience</label>
+          <input type="number" id="experience" name="experience" min="1" max="50" required>
+        </div>
+        <div class="button-container">
+          <button type="button" class="prev-btn">Previous</button>
+          <button type="button" class="next-btn">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 3: Skills -->
+      <div class="form-step">
+        <div class="form-group">
+          <label>Select your skills</label>
+          <div class="skills-group">
+            <div>
+              <input type="checkbox" id="skill-javascript" name="skills" value="JavaScript" class="skill-checkbox">
+              <label for="skill-javascript">JavaScript</label>
+            </div>
+            <div>
+              <input type="checkbox" id="skill-typescript" name="skills" value="TypeScript" class="skill-checkbox">
+              <label for="skill-typescript">TypeScript</label>
+            </div>
+            <div>
+              <input type="checkbox" id="skill-python" name="skills" value="Python" class="skill-checkbox">
+              <label for="skill-python">Python</label>
+            </div>
+            <div>
+              <input type="checkbox" id="skill-cypress" name="skills" value="Cypress" class="skill-checkbox">
+              <label for="skill-cypress">Cypress</label>
+            </div>
+            <div>
+              <input type="checkbox" id="skill-playwright" name="skills" value="Playwright" class="skill-checkbox">
+              <label for="skill-playwright">Playwright</label>
+            </div>
+            <div>
+              <input type="checkbox" id="skill-selenium" name="skills" value="Selenium" class="skill-checkbox">
+              <label for="skill-selenium">Selenium</label>
+            </div>
+            <div>
+              <input type="checkbox" id="skill-aws" name="skills" value="AWS" class="skill-checkbox">
+              <label for="skill-aws">AWS</label>
+            </div>
+            <div>
+              <input type="checkbox" id="skill-docker" name="skills" value="Docker" class="skill-checkbox">
+              <label for="skill-docker">Docker</label>
+            </div>
+            <div>
+              <input type="checkbox" id="skill-kubernetes" name="skills" value="Kubernetes" class="skill-checkbox">
+              <label for="skill-kubernetes">Kubernetes</label>
+            </div>
+          </div>
+        </div>
+        <!-- LinkedIn Profile -->
+        <div class="form-group">
+          <label for="linkedin">LinkedIn Profile Link</label>
+          <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/your-profile">
+        </div>
+
+        <div class="button-container">
+          <button type="button" class="prev-btn">Previous</button>
+          <button type="button" class="next-btn">Next</button>
+        </div>
+      </div>
+
+
+
+      <!-- Step 4: Submission -->
+      <div class="form-step">
+        <div class="form-group">
+          <h3>Review & Submit</h3>
+          <p>Please ensure all your details are correct before submitting your application.</p>
+
+          <!-- Table to display the user's information -->
+          <table id="reviewTable" class="review-table">
+            <tr>
+              <th>Field</th>
+              <th>Details</th>
+            </tr>
+            <tr>
+              <td>Full Name</td>
+              <td id="display-name"></td>
+            </tr>
+            <tr>
+              <td>Email Address</td>
+              <td id="display-email"></td>
+            </tr>
+            <tr>
+              <td>Phone Number</td>
+              <td id="display-phone"></td>
+            </tr>
+            <tr>
+              <td>Position</td>
+              <td id="display-position"></td>
+            </tr>
+            <tr>
+              <td>Years of Experience</td>
+              <td id="display-experience"></td>
+            </tr>
+            <tr>
+              <td>Skills</td>
+              <td id="display-skills"></td>
+            </tr>
+            <tr>
+              <td>Resume</td>
+              <td id="display-resume"></td>
+            </tr>
+            <tr>
+              <td>LinkedIn Profile</td>
+              <td id="display-linkedin"></td>
+            </tr>
+          </table>
+
+          <div class="button-container">
+            <button type="button" class="prev-btn">Previous</button>
+            <button type="submit" class="submit-btn">Submit</button>
+          </div>
+        </div>
+      </div>
+
+
+    </form>
+  </div>
+
+  <!-- JavaScript to handle form wizard -->
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

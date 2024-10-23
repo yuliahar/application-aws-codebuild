@@ -1,0 +1,191 @@
+/* General Styles */
+body {
+	font-family: "Arial", sans-serif;
+	background-color: #f4f4f4;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+/* Form Wizard Container */
+.form-wizard {
+	background-color: white;
+	padding: 40px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	width: 600px;
+}
+
+h1 {
+	text-align: center;
+	font-size: 26px;
+	margin-bottom: 30px;
+	color: #333;
+}
+
+/* Progress Bar */
+.progress-bar {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 40px;
+}
+
+.step {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	flex: 1;
+}
+
+.bullet {
+	width: 45px;
+	height: 45px;
+	border: 3px solid #5cb85c;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	color: #5cb85c;
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+.bullet.active {
+	background-color: #5cb85c;
+	color: white;
+}
+
+.step p {
+	margin: 0;
+	font-size: 16px;
+	color: #333;
+}
+
+/* Form Group */
+.form-group {
+	margin-bottom: 20px;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+	padding: 10px;
+	font-size: 16px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box; /* Ensures proper sizing */
+}
+
+/* Centralizing Buttons */
+.button-container {
+	display: flex;
+	justify-content: center;
+	gap: 15px; /* Adds space between the buttons */
+	margin-top: 20px; /* Adds some margin for better spacing */
+}
+
+button {
+	padding: 12px 20px;
+	background-color: #5cb85c;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+button:hover {
+	background-color: #4cae4c;
+}
+
+button.prev-btn {
+	background-color: #ccc;
+}
+
+button.prev-btn:hover {
+	background-color: #bbb;
+}
+
+button.submit-btn {
+	width: 100%;
+}
+
+button.submit-btn:hover {
+	background-color: #4cae4c;
+}
+
+/* Active Step */
+.form-step {
+	display: none;
+}
+
+.form-step.active {
+	display: block;
+}
+
+/* Table Styles for Review Section */
+.review-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 20px;
+}
+
+.review-table th,
+.review-table td {
+	border: 1px solid #ddd;
+	padding: 12px;
+	text-align: left;
+}
+
+.review-table th {
+	background-color: #f4f4f4;
+	font-weight: bold;
+}
+
+.review-table td {
+	font-size: 14px;
+	color: #333;
+}
+
+/* Aligning the checkbox groups */
+.skills-group {
+	display: grid;
+	grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+	gap: 15px 20px; /* Space between rows and columns */
+}
+
+.skills-group div {
+	display: flex;
+	align-items: center; /* Vertically centers the checkbox and label */
+	justify-content: flex-start; /* Aligns checkbox and label to the left */
+}
+
+.skills-group input[type="checkbox"] {
+	margin-right: 10px; /* Adds space between checkbox and label */
+	width: 50%;
+}
+
+.skills-group label {
+	margin-left: 10px;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+/* Add distinct styles for checkboxes */
+.skill-checkbox {
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+}
